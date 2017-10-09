@@ -1,0 +1,24 @@
+---
+title: "ChIP.GeneSets"
+author: "Laura Puente Santamaría, Luis del Peso"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This package is contains a collection of GeneSet objects storing Entrez Gene IDs of genes assigned to 1059 ChIP-Seq experiments.
+The list is loaded on to the enviroment as follows:
+```{r eval=TRUE,echo=TRUE}
+library(ChIP.GeneSets)
+data("gene_set_list",package="ChIP.GeneSets")
+```
+
+To extract a particular GeneSet, use its Accession ID:
+
+```{r eval=TRUE,echo=TRUE}
+gene_set<-gene_set_list[["wgEncodeEH002801"]]
+GSEABase::details(gene_set)
+```

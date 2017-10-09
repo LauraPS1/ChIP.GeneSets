@@ -1,0 +1,15 @@
+Package: ChIP.GeneSets
+Type: Package
+Title: GeneSet objects from ChIP-Seq experiments
+Version: 0.99.0
+Author: Laura Puente Santamaría, Luis del Peso
+Maintainer: Laura Puente Santamaría <lpsantamaria@iib.uam.es>
+Description: This package contains a list of 1059 GeneSet objects storing Entrez Gene IDs of genes assigned to 1059 ChIP-Seq experiments
+License: Artistic-2.0
+Encoding: UTF-8
+LazyData: false
+RoxygenNote: 6.0.1
+Imports: GSEABase
+biocViews: Transcription, ChIPSeq, GeneSetEnrichment
+NeedsCompilation: no
+Packaged: 2017-10-09 09:58:37 UTC; laura
