@@ -9,7 +9,9 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-This package is contains a collection of GeneSet objects storing Entrez Gene IDs of genes assigned to 1059 ChIP-Seq experiments.
+This package is contains a collection of GeneSet objects storing Entrez Gene IDs of genes assigned to trancription factor binding sites (TFBS) from ChIP-Seq experiments. The package includes a total of 1059 datasets compiled from the ENCODE Consortium ^[ENCODE Project Consortium (2012) Nature 489, 57-74)] and individual contributions to the GEO repository^[Edgar, R et al. (2002) Nucleic Acids Res. 30:207-10] ^[Barrett, T et al. (2013) Nucleic Acids Res. 41(Database issue):D991-5]. The combined information includes the binding sites for 320 individual factors. 
+For gene assignation, the binding sites (ChIPseq peaks) in each dataset were filtered to select those overlapping or near to (by default max. distance 10 nucleotides) DNase HS regions located within 1Kb of genes. Then, each peak was associated to the gene id of the nearest DNase HS region. 
+
 The list is loaded on to the enviroment as follows:
 ```{r eval=TRUE,echo=TRUE}
 library(ChIP.GeneSets)
@@ -22,3 +24,5 @@ To extract a particular GeneSet, use its Accession ID:
 gene_set<-gene_set_list[["wgEncodeEH002801"]]
 GSEABase::details(gene_set)
 ```
+
+See also package TFEA.ChIP
